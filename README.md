@@ -20,6 +20,12 @@ This repository is organized to guide you through the project's lifecycle, from 
 * **`requirements.txt`**: The list of Python libraries required to run the notebooks.
 * **`dataset/public/`**: Contains the raw input data files (`train.csv`, `test.csv`, `routes.json`, `jalanraya_ui_flowcoord.json`, `sample_submission.csv`).
 
+## UI Bikun Route Map
+
+The Bikun system operates on two main routes (Red and Blue) connecting various faculties and facilities across the UI campus.
+
+![UI Bikun Route Map](assets/rute_bikun.png)
+
 ## The Data and the Challenge
 
 The dataset is derived from the historical travel logs of the UI Bikun from September 14, 2024, to September 27, 2024. The core challenge was transforming this data into a structured format for predictive modeling, particularly generating the RTA label.
@@ -33,6 +39,8 @@ The dataset is derived from the historical travel logs of the UI Bikun from Sept
 ### RTA: Defining the Target Variable
 
 Since the RTA (target variable) was missing, I engineered a method to derive it. RTA represents the time required to reach the next stop. A key insight applied here is that RTA only resets to 0 *exactly* when the bus is about to leave a stop for the next destination. While the bus is idle at a stop to pick up/drop off passengers, RTA continues to be counted (`> 0`). This nuanced approach ensures that the model accurately captures stop durations.
+
+![Visualisasi Perhitungan RTA](assets/rta_animation.gif)
 
 ## Our Approach: Analysis, Feature Engineering, and Modeling
 

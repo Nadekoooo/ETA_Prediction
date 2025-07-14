@@ -1,6 +1,6 @@
 # Predicting Bikun ETA: A Data Science Approach to Campus Transportation
 
-![Bis Kuning Illustration](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmegapolitan.kompas.com%2Fread%2F2022%2F08%2F21%2F00400041%2Frute-bus-kuning-ui-&psig=AOvVaw3sgFSy1Y7yWpfhIamgoIzA&ust=1752551549311000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiattS5u44DFQAAAAAdAAAAABAE)
+![Bis Kuning Illustration]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fmegapolitan.kompas.com%2Fread%2F2022%2F08%2F21%2F00400041%2Frute-bus-kuning-ui-&psig=AOvVaw3sgFSy1Y7yWpfhIamgoIzA&ust=1752551549311000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiattS5u44DFQAAAAAdAAAAABAE](https://asset.kompas.com/crops/0hXWmNpekYGK8Mn_MuHOt5t0QP4=/64x0:1234x780/1200x800/data/photo/2022/08/09/62f1cb720043c.jpeg))
 
 This project focuses on the implementation of a predictive model for the Estimated Time of Arrival (ETA) of the UI (Universitas Indonesia) Bikun (Yellow Bus). Leveraging advanced machine learning methodologies, this initiative showcases my proficiency in handling geospatial time-series data, applying sophisticated feature engineering, and developing robust models to address complex logistical challenges in urban transportation.
 

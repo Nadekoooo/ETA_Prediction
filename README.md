@@ -1,6 +1,8 @@
 # Predicting Bikun ETA: A Data Science Approach to Campus Transportation
 
-This portfolio project focuses on the implementation of a predictive model for the Estimated Time of Arrival (ETA) of the UI (Universitas Indonesia) Bikun (Yellow Bus). Leveraging advanced machine learning methodologies, this initiative showcases my proficiency in handling geospatial time-series data, applying sophisticated feature engineering, and developing robust models to address complex logistical challenges in urban transportation.
+![Bis Kuning Illustration]([https://www.google.com/url?sa=i&url=https%3A%2F%2Fmegapolitan.kompas.com%2Fread%2F2022%2F08%2F21%2F00400041%2Frute-bus-kuning-ui-&psig=AOvVaw3sgFSy1Y7yWpfhIamgoIzA&ust=1752551549311000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiattS5u44DFQAAAAAdAAAAABAE](https://asset.kompas.com/crops/0hXWmNpekYGK8Mn_MuHOt5t0QP4=/64x0:1234x780/1200x800/data/photo/2022/08/09/62f1cb720043c.jpeg))
+
+This project focuses on the implementation of a predictive model for the Estimated Time of Arrival (ETA) of the UI (Universitas Indonesia) Bikun (Yellow Bus). Leveraging advanced machine learning methodologies, this initiative showcases my proficiency in handling geospatial time-series data, applying sophisticated feature engineering, and developing robust models to address complex logistical challenges in urban transportation.
 
 Providing accurate ETA is crucial for improving public transportation efficiency and user experience. Leveraging historical GPS data from the Bikun system, I developed a comprehensive framework to estimate arrival times to the nearest stop.
 
@@ -20,6 +22,12 @@ This repository is organized to guide you through the project's lifecycle, from 
 * **`requirements.txt`**: The list of Python libraries required to run the notebooks.
 * **`dataset/public/`**: Contains the raw input data files (`train.csv`, `test.csv`, `routes.json`, `jalanraya_ui_flowcoord.json`, `sample_submission.csv`).
 
+## UI Bikun Route Map
+
+The Bikun system operates on two main routes (Red and Blue) connecting various faculties and facilities across the UI campus.
+
+![UI Bikun Route Map](assets/rute_bikun.png)
+
 ## The Data and the Challenge
 
 The dataset is derived from the historical travel logs of the UI Bikun from September 14, 2024, to September 27, 2024. The core challenge was transforming this data into a structured format for predictive modeling, particularly generating the RTA label.
@@ -33,6 +41,8 @@ The dataset is derived from the historical travel logs of the UI Bikun from Sept
 ### RTA: Defining the Target Variable
 
 Since the RTA (target variable) was missing, I engineered a method to derive it. RTA represents the time required to reach the next stop. A key insight applied here is that RTA only resets to 0 *exactly* when the bus is about to leave a stop for the next destination. While the bus is idle at a stop to pick up/drop off passengers, RTA continues to be counted (`> 0`). This nuanced approach ensures that the model accurately captures stop durations.
+
+![Visualisasi Perhitungan RTA](assets/rta_animation.gif)
 
 ## Our Approach: Analysis, Feature Engineering, and Modeling
 
